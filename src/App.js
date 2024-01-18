@@ -1,11 +1,14 @@
-import Work1 from './components/Work1';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './pages/Main';
+import Work1 from './pages/Work1';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Work1 />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Main />}></Route>
+        <Route path="/work1" element={<Work1 />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
